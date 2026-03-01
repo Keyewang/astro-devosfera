@@ -6,6 +6,8 @@ Heavily customized version of the [AstroPaper](https://github.com/satnaing/astro
 
 ![Devosfera OG](public/devosfera-og.webp)
 
+> **Note:** This project is primarily my personal blog. If anyone wishes to use it, feel free to delete all entries and edit the settings freely.
+
 ---
 
 ## Table of contents
