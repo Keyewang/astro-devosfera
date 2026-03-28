@@ -2,7 +2,7 @@
 
 Heavily customized version of the [AstroPaper](https://github.com/satnaing/astro-paper) theme with a **Terminal/Cyberpunk** aesthetic, image galleries, global search modal, and dozens of visual and interactive improvements.
 
-**🌐 Live demo:** [devosfera.vercel.app](https://devosfera.vercel.app)
+**🌐 Live demo:** [keye.wang](https://keye.wang)
 
 ![Devosfera OG](public/devosfera-og.webp)
 
@@ -260,7 +260,7 @@ All site configuration lives in `src/config.ts` (the `SITE` constant):
 
 ```ts
 export const SITE = {
-  website: "https://devosfera.vercel.app/",
+  website: "https://keye.wang/",
   author: "Andrés",
   desc: "A space where curiosity turns into code",
   title: "Devosfera",

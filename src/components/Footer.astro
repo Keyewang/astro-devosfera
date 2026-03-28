@@ -3,7 +3,7 @@ import type { HTMLAttributes } from "astro/types";
 import { SOCIALS } from "@/constants";
 import LinkButton from "./LinkButton.astro";
 import { SITE } from "@/config";
-import Logo from "@/assets/logo/devosfera.svg";
+import Logo from "@/assets/logo/keye.svg";
 
 const currentYear = new Date().getFullYear();
 
@@ -35,27 +35,41 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
           href="/"
           class="group relative flex items-center gap-2 text-lg font-bold tracking-tight"
         >
-          <Logo class="w-28 opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.5)] dark:invert" />
+          <Logo
+            class="w-28 opacity-80 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100 group-hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.5)] dark:invert"
+          />
         </a>
         <p
           class="max-w-xs text-center font-cartograph text-[11px] leading-relaxed tracking-wide text-foreground/40 sm:text-start"
         >
-          Un espacio donde la curiosidad se convierte en código.
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm">蜀ICP备2024099559号-1</a
+          >
+          <br />
+          <a
+            href="https://beian.mps.gov.cn/#/query/webSearch?code=51015602001074"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm">川公网安备51015602001074</a
+          >
         </p>
       </div>
 
       <!-- Social links -->
       <div class="flex flex-col items-center gap-3 sm:items-end">
         <span
-          class="font-cartograph text-[10px] tracking-wider text-muted-foreground uppercase select-none"
-          >Conectar</span
+          class="text-muted-foreground font-cartograph text-[10px] tracking-wider uppercase select-none"
+          >Connect With Me</span
         >
         <div class="flex items-center gap-2">
           {
             SOCIALS.map(social => (
               <LinkButton
                 href={social.href}
-                class="footer-social-btn group relative flex size-9 items-center justify-center rounded-xl border border-border/20 bg-muted/20 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50"
+                class="footer-social-btn group relative flex size-9 items-center justify-center rounded-xl border border-border/20 bg-muted/20 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-accent/10 focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:outline-none"
                 title={social.linkTitle}
               >
                 <social.icon class="size-4.5 fill-transparent stroke-foreground/60 stroke-[1.5px] transition-all duration-300 group-hover:stroke-accent" />
@@ -80,11 +94,11 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
     >
       <p class="font-cartograph text-[11px] tracking-wide opacity-35">
         &copy; {currentYear}
-        {SITE.title}. Todos los derechos reservados.
+        {SITE.title}.
       </p>
-      <p class="font-cartograph text-[11px] tracking-wide opacity-30">
+      <!-- <p class="font-cartograph text-[11px] tracking-wide opacity-30">
         Hecho con <span class="text-accent">&#9829;</span> y mucho café
-      </p>
+      </p> -->
     </div>
   </div>
 </footer>
@@ -107,6 +121,7 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
   }
 
   .footer-social-btn:hover {
-    box-shadow: 0 8px 20px -4px color-mix(in srgb, var(--accent) 30%, transparent);
+    box-shadow: 0 8px 20px -4px
+      color-mix(in srgb, var(--accent) 30%, transparent);
   }
 </style>
